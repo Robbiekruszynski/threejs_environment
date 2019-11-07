@@ -27,7 +27,14 @@
         constoles.addEventListener("change", renderer);
 
         let materialArray = [];
-        let texture_ft = new THREE.TextureLoader().load("images/skymap.jpg");
+        let texture_ft = new THREE.TextureLoader().load("images/skymap_ft.jpg");
+
+        materialArray.push(new THREE.MeshBasicMaterial({ map: texture_ft }));
+        materialArray.push(new THREE.MeshBasicMaterial({ map: texture_ft }));
+        materialArray.push(new THREE.MeshBasicMaterial({ map: texture_ft }));
+        materialArray.push(new THREE.MeshBasicMaterial({ map: texture_ft }));
+        materialArray.push(new THREE.MeshBasicMaterial({ map: texture_ft }));
+        materialArray.push(new THREE.MeshBasicMaterial({ map: texture_ft }));
       }
     </script>
   </body>
