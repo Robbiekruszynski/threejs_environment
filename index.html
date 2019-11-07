@@ -7,6 +7,7 @@
   </head>
   <body>
     <script src="js/three.min.js"></script>
+    <script src="js/OrbitControls.js"></script>
     <script>
       let scene, camera, renderer;
       function init() {
@@ -23,8 +24,8 @@
         renderer.setSize(window.innerWidth, window.innerHeight);
         document.body.appendChild(renderer.domElement);
 
-        let controls = new Three.OrbitControls(camera);
-        constoles.addEventListener("change", renderer);
+        let controls = new THREE.OrbitControls(camera);
+        controls.addEventListener("change", renderer);
 
         let materialArray = [];
         let texture_ft = new THREE.TextureLoader().load("images/skymap_ft.jpg");
