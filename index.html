@@ -6,7 +6,7 @@
     <title>Document</title>
   </head>
   <body>
-    <script src="/js/three.min.js"></script>
+    <script src="js/three.min.js"></script>
     <script>
       let scene, camera, renderer;
       function init() {
@@ -20,7 +20,14 @@
         camera.position.set(-900, -200, -900);
 
         renderer = new THREE.WebGLRenderer({ antialias: true });
-        renderer;
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        let controls = new Three.OrbitControls(camera);
+        constoles.addEventListener("change", renderer);
+
+        let materialArray = [];
+        let texture_ft = new THREE.TextureLoader().load("images/skymap.jpg");
       }
     </script>
   </body>
